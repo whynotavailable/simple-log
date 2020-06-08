@@ -1,7 +1,11 @@
-run:
-	go build
+GO=go
+
+run: simple-log
 	./simple-log
 
+simple-log: *.go
+	$(GO) build
+
 vet:
-	go fmt
-	go vet
+	$(GO) fmt
+	$(GO) vet
